@@ -1,9 +1,8 @@
-# import all necessary pakages
+# Import all necessary packages
 import pandas as pd
-import numpy as np
+import numpy as np 
 import pickle
 import streamlit as st
-
 
 # Load preprocessor
 with open("notebook/Pipeline.pkl", "rb") as file1:
@@ -28,9 +27,10 @@ def predict_data(sep_len, sep_wid, pet_len, pet_wid):
     max_prob = np.max(prob)
     return pred, max_prob
 
-# Run Stremlit app
-if __name__ =="__main__":
-    st.set_page_config(page_title='Iris Project Pooja')
+
+# Run streamlit app
+if __name__ == "__main__":
+    st.set_page_config(page_title="Iris Project Pooja")
     st.title("Iris Project - Pooja Kamble")
     st.subheader("Please provide below inputs")
     # Take input from user
